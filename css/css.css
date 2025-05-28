@@ -12,10 +12,21 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    color: #2a3a4a;
+}
 main {
     flex: 1;
     padding: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
 }
 
 header {
@@ -31,6 +42,58 @@ header {
 header h1 {
     margin-bottom: 30px;
 }
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    color: #2a3a4a;
+}
+
+details {
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: box-shadow 0.2s;
+}
+
+details[open] {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 14px 18px;
+    outline: none;
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+
+summary:hover {
+    background: #e3f0ff;
+}
+
+details p {
+    padding: 0 18px 14px 18px;
+    color: #444;
+    font-size: 1rem;
+}
+
+
+    
+
 
 nav ul {
     list-style: none;
@@ -208,30 +271,26 @@ nav a:focus {
     color: #333;
 }
 .dark-mode {
-    background-color: #181818;
-    color: #f4f4f4;
+    background-color: #181c22 !important;
+    color: #e3eaf2 !important;
 }
-.dark-mode header,
-.dark-mode footer {
-    .dark-mode header {
-    background: linear-gradient(90deg, #232b36 60%, #274472 100%);
-    color: #e3eaf2;
+.dark-mode main {
+    background: #23272f !important;
+    color: #e3eaf2 !important;
 }
+.dark-mode details {
+    background: #232b36 !important;
+    border-color: #2a3442 !important;
 }
-.dark-mode .btn-modo-escuro {
-    background: #fff;
-    color: #222;
-}
-.dark-mode .membro {
-    background-color: #222;
-    color: #f4f4f4;
-    border: 1px solid #444;
+.dark-mode details p,
+.dark-mode summary {
+    color: #e3eaf2 !important;
 }
 .dark-mode .hero,
 .dark-mode .objetivo-valor > div,
 .dark-mode .chamada-acao {
-    background: #23272f !important;
-    color: #f4f4f4 !important;
+    background: #232b36 !important;
+    color: #90e0ef !important;
 }
 
 .dark-mode .objetivo-valor h3,
@@ -257,12 +316,12 @@ nav a:focus {
 
 .dark-mode .btn-modo-escuro {
     background: #e3eaf2;
-    color: #232b36;
+    color: #20232a;
 }
 
 .dark-mode .hero {
-    background: linear-gradient(90deg, #232b36 20%, #274472 100%) !important;
-    color: #e3eaf2 !important;
+    background: #20232a !important;
+    color: red !important;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
@@ -274,7 +333,7 @@ nav a:focus {
 .dark-mode .objetivo-valor p,
 .dark-mode .objetivo-valor ul,
 .dark-mode .chamada-acao {
-    background: #232b36 !important;
+    background: #20232a !important;
 }
 
 .dark-mode .links a {
