@@ -2,31 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.25s ease;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2.2rem;
     margin-bottom: 32px;
     color: #2a3a4a;
 }
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
 main {
-    flex: 1;
-    padding: 20px;
-    max-width: 700px;
-    margin: 40px auto;
+    padding-bottom: 60px;
+    max-width: 960px; 
+    margin: 40px auto 0 auto;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 32px 24px;
+    padding: 32px 24px 24px 24px;
+    flex: 1;
 }
 
 header {
@@ -41,21 +47,6 @@ header {
 }
 header h1 {
     margin-bottom: 30px;
-}
-main {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 32px 24px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 32px;
-    color: #2a3a4a;
 }
 
 details {
@@ -75,10 +66,13 @@ summary {
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 14px 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* alinhado à esquerda, padding ajustado para não ficar colado */
     outline: none;
     transition: background 0.2s;
     border-radius: 8px;
+    white-space: nowrap;
 }
 
 summary:hover {
@@ -90,10 +84,6 @@ details p {
     color: #444;
     font-size: 1rem;
 }
-
-
-    
-
 
 nav ul {
     list-style: none;
@@ -112,7 +102,6 @@ nav a {
     font-size: 1.1rem;
     padding: 8px 18px;
     border-radius: 20px;
-    transition: background 0.3s, color 0.3s;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -123,23 +112,42 @@ nav a:focus {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     text-decoration: none;
 }
+footer {
+    margin-top: auto;
+    background: linear-gradient(90deg, #0077b6 60%, #90e0ef 100%);
+    color: white;
+    text-align: center;
+    padding: 18px 10px 15px 10px;
+    font-size: 1.08rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
 
 .btn-modo-escuro {
     position: absolute;
     top: 20px;
     right: 30px;
-    padding: 3px 8px;
+    padding: 6px 14px;
     background: #222;
     color: #fff;
     border: none;
     border-radius: 25px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
 }
 .btn-modo-escuro:hover {
     background: #444;
     color: #ffd700;
+}
+.dark-mode .btn-modo-escuro {
+    background: #e3eaf2;
+    color: #20232a;
+}
+.dark-mode .btn-modo-escuro:hover {
+    background: #7dacdf;
+    color: #20232a;
 }
 
 .equipe {
@@ -147,7 +155,7 @@ nav a:focus {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    padding: 20px 0;
+    padding: 0;
 }
 .membro {
     background-color: #fff;
@@ -270,38 +278,52 @@ nav a:focus {
     font-size: 1.1rem;
     color: #333;
 }
+
+/* dark-mode */
 .dark-mode {
-    background-color: #181c22 !important;
-    color: #e3eaf2 !important;
+    background-color: #181c22;
+    color: #e3eaf2;
 }
 .dark-mode main {
-    background: #23272f !important;
-    color: #e3eaf2 !important;
+    background: #23272f;
+    color: #e3eaf2;
 }
 .dark-mode details {
-    background: #232b36 !important;
-    border-color: #2a3442 !important;
+    background: #232b36;
+    border-color: #2a3442;
+}
+.dark-mode summary:hover{
+    color: #000000;
 }
 .dark-mode details p,
 .dark-mode summary {
-    color: #e3eaf2 !important;
+    color: #e3eaf2;
+}
+.dark-mode .membro {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 .dark-mode .hero,
 .dark-mode .objetivo-valor > div,
 .dark-mode .chamada-acao {
-    background: #232b36 !important;
-    color: #90e0ef !important;
+    background: #232b36;
+    color: #90e0ef;
 }
 
 .dark-mode .objetivo-valor h3,
 .dark-mode .chamada-acao h3 {
-    color: #90e0ef !important;
+    color: #90e0ef;
 }
 
 .dark-mode .objetivo-valor p,
 .dark-mode .objetivo-valor ul,
 .dark-mode .chamada-acao p {
-    color: #f4f4f4 !important;
+    color: #f4f4f4;
 }
 .dark-mode {
     background-color: #181c22;
@@ -314,26 +336,21 @@ nav a:focus {
     color: #e3eaf2;
 }
 
-.dark-mode .btn-modo-escuro {
-    background: #e3eaf2;
-    color: #20232a;
-}
-
 .dark-mode .hero {
-    background: #20232a !important;
-    color: red !important;
+    background: #20232a;
+    color: #e3eaf2;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
 .dark-mode .objetivo-valor h3,
 .dark-mode .chamada-acao h3 {
-    color: #7fd6ff !important;
+    color: #7fd6ff;
 }
 
 .dark-mode .objetivo-valor p,
 .dark-mode .objetivo-valor ul,
 .dark-mode .chamada-acao {
-    background: #20232a !important;
+    background: #20232a;
 }
 
 .dark-mode .links a {
@@ -345,22 +362,17 @@ nav a:focus {
     color: #232b36;
 }
 .dark-mode .objetivo-valor > div, .dark-mode .objetivo-valor ul, .dark-mode .objetivo-valor p {
-    background: #20232a !important;
-    color: #e3eaf2 !important;
+    background: #20232a;
+    color: #e3eaf2;
 }
+.dark-mode .hero h2 {
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #7fd6ff;
+    }
 
-footer {
-    background: linear-gradient(90deg, #0077b6 60%, #90e0ef 100%);
-    color: white;
-    text-align: center;
-    padding: 18px 10px 15px 10px;
-    font-size: 1.08rem;
-    letter-spacing: 1px;
-    box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    margin-top: 40px;
-}
 
 /* RESPONSIVIDADE */
 @media (max-width: 900px) {
@@ -403,9 +415,6 @@ footer {
     }
     .chamada-acao {
         padding: 0 8px;
-    }
-    .hero h2 {
-        font-size: 1.3rem;
     }
 }
 
