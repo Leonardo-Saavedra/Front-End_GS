@@ -18,7 +18,7 @@ index.html
 integrantes.html
 solucao.html
 
-zREADME.md
+README.md
 
 # Tecnologias utilizadas
 
