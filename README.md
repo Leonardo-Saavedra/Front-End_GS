@@ -6,15 +6,24 @@ garantindo que comunidades em risco recebam alertas precisos e acesso imediato a
 meios de comunicação. 
 
 # Estrutura de pastas e arquivos
-css
-    css.css 
-img 
+css /
+   
+    css.css
+
+img / 
+
     Felipe.png
-img
-    João.png 
-img
-    Leonardo.png 
-js
+
+img /
+
+    João.png
+
+img /
+
+    Leonardo.png
+
+js /
+
     js.js
 
 contato.html
