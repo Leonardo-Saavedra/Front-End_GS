@@ -49,7 +49,7 @@ README.md
 # Integrantes
 - Felipe Ribeiro Salles de Camargo  - 1TDSPY - RM: 565224
 - João Victor Santana dos Santos    - 1TDSPY - RM: 566063
-- Leonardo Saavedra de Souza Campos - 1TDSA  - RM: 562229
+- Leonardo Saavedra de Souza Campos - 1TDSA  - RM: 562229 - PROFESSOR: Adriano Kleber Milanez
 
 
 # Endereço repositório do projeto no GITHUB
