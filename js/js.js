@@ -90,21 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateEmail(email) {
-        // Regex simples para validação de e-mail
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 });
 
-
-
-  window.watsonAssistantChatOptions = {
-    integrationID: "483206bb-c74e-4603-9e7c-4f45f4e06b28", 
-    region: "au-syd", 
-    serviceInstanceID: "83c51838-e2b0-450c-a895-175727118bab", 
-    onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
