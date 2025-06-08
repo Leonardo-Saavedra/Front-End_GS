@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: herol, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     
@@ -184,7 +184,17 @@ main .contato p {
 .formulario-contato button:hover {
     background-color: #023e8a;
 }
-
+.erro-form {
+    color: #d90429;
+    font-size: 0.98rem;
+    margin-left: 4px;
+    display: block;
+    margin-bottom: 4px;
+}
+.erro-input {
+    border-color: #d90429 !important;
+    background: #fff0f3;
+}
 body.dark-mode main.contato {
     background-color: #1e1e1e;
     color: #f4f4f4;

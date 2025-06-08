@@ -44,6 +44,59 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".formulario-contato");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        let valid = true;
+        clearErrors();
+
+        const nome = form.nome;
+        if (!nome.value.trim()) {
+            showError(nome, "Por favor, preencha seu nome.");
+            valid = false;
+        }
+
+        const email = form.email;
+        if (!email.value.trim()) {
+            showError(email, "Por favor, preencha seu e-mail.");
+            valid = false;
+        } else if (!validateEmail(email.value)) {
+            showError(email, "Digite um e-mail válido.");
+            valid = false;
+        }
+
+        const mensagem = form.mensagem;
+        if (mensagem && !mensagem.value.trim()) {
+            showError(mensagem, "Por favor, escreva sua mensagem.");
+            valid = false;
+        }
+
+        if (!valid) e.preventDefault();
+    });
+
+    function showError(input, message) {
+        let error = document.createElement("span");
+        error.className = "erro-form";
+        error.innerText = message;
+        input.classList.add("erro-input");
+        input.parentNode.insertBefore(error, input.nextSibling);
+    }
+
+    function clearErrors() {
+        form.querySelectorAll(".erro-form").forEach(e => e.remove());
+        form.querySelectorAll(".erro-input").forEach(e => e.classList.remove("erro-input"));
+    }
+
+    function validateEmail(email) {
+        // Regex simples para validação de e-mail
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+});
+
+
+
   window.watsonAssistantChatOptions = {
     integrationID: "483206bb-c74e-4603-9e7c-4f45f4e06b28", 
     region: "au-syd", 
