@@ -47,8 +47,8 @@ header {
     padding: 20px 0 10px 0;
     position: relative;
     text-align: center;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 header h1 {
@@ -479,12 +479,18 @@ footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        gap: 24px;
+        max-width: 100%;
+        padding: 16px 4vw;
+    }
     .objetivo-valor {
         flex-direction: column;
         gap: 15px;
     }
     .hero, .objetivo-valor, .chamada-acao {
-        max-width: 98vw;
+        max-width: 100%;
         padding-left: 8px;
         padding-right: 8px;
     }
